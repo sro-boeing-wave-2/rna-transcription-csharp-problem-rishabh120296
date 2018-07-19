@@ -6,7 +6,31 @@ namespace RNATranscriptionModule
     {
         public static string ToRna(string nucleotide)
         {
-            throw new NotImplementedException("You need to implement this function.");
+            string rna = "";
+            foreach (char element in nucleotide)
+            {
+                if(element == 'G')
+                {
+                    rna += 'C';
+                }
+                else if (element == 'C')
+                {
+                    rna += 'G';
+
+                }
+                else if (element == 'T')
+                {
+                    rna += 'A';
+
+                }
+                else if (element == 'A')
+                {
+                    rna += 'U';
+
+                }
+            }
+            return rna;
+
         }
     }
 }
